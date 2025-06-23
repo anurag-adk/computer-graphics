@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C/C++: g++.exe build active file",
+      "type": "shell",
+      "command": "C:/MingW/mingw32/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "-I",
+        "C:/MingW/mingw32/include",
+        "-L",
+        "C:/MingW/mingw32/lib",
+        "-lbgi",
+        "-lgdi32",
+        "-lcomdlg32",
+        "-luuid",
+        "-loleaut32",
+        "-lole32"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
